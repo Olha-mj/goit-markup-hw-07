@@ -267,7 +267,7 @@ button:focus {
 .page-main-title {
   font-weight: 700;
   font-size: 36px;
-  line-height: 1.07;
+  line-height: 1.1;
   letter-spacing: 0.02em;
   height: 120px;
   text-align: center;
@@ -542,7 +542,7 @@ button:focus {
   display: flex;
   justify-content: center;
   gap: 16px;
-  margin-top: 8px;
+  margin-top: 16px;
 }
 
 .footer-list-link {
@@ -1021,4 +1021,85 @@ button:focus {
 }
 
 .checkbox-text {
+}
+
+/* Tablet */
+
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+
+  .page-main-title {
+    font-size: 56px;
+    line-height: 1.07;
+  }
+  .advantages-list-item {
+    width: calc((100% - 24px) / 2);
+  }
+
+  .our-advantages-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+  }
+
+  .advantages-title {
+    text-align: left;
+  }
+
+  .our-team-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 24px;
+  }
+
+  .our-team-list-item {
+    width: calc((100% - 24px) / 2);
+  }
+
+  .customers-list {
+    justify-content: center;
+    gap: 24px;
+  }
+  .customers-list-item {
+    width: calc((100% - 24px) / 4);
+  }
+
+  .footer-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: baseline;
+    justify-content: flex-start;
+    gap: 24px;
+    margin-left: 108px;
+  }
+
+  .footer-info {
+    align-items: flex-start;
+  }
+
+  .social-media-text {
+    text-align: left;
+    padding-left: 38px;
+  }
+
+  .footer-form-container {
+    margin-top: 72px;
+  }
+
+  .footer-form-text {
+    text-align: left;
+  }
+
+  .footer-form {
+    display: flex;
+    gap: 24px;
+  }
+
+  .footer-form-input {
+    min-width: 264px;
+  }
 }
