@@ -109,11 +109,18 @@ button:focus {
 }
 
 .menu {
+  visibility: hidden;
+  pointer-events: none;
+  margin: 0;
+  padding: 0;
   display: none;
 }
 
-.contact-ifo {
-  display: none;
+.contact-info {
+  visibility: hidden;
+  pointer-events: none;
+  margin: 0;
+  padding: 0;
 }
 
 .mobile-menu-open-btn {
@@ -143,14 +150,15 @@ button:focus {
   visibility: hidden;
 }
 
-/* .mobile-menu.is-open {
+.mobile-menu.is-open {
   opacity: 1;
   pointer-events: auto;
   visibility: visible;
-} */
+}
 
 .mobile-menu-container {
   position: relative;
+  padding: 80px 35px 40px 40px;
 }
 
 .mobile-menu-close-btn {
@@ -177,11 +185,6 @@ button:focus {
   gap: 284px;
 }
 
-.mobile-menu-list-wrapper {
-  margin-top: 80px;
-  margin-left: 24px;
-}
-
 .mobile-menu-list {
   display: flex;
   flex-direction: column;
@@ -192,7 +195,7 @@ button:focus {
   color: var(--hero-color);
   font-weight: 700;
   font-size: 36px;
-  line-height: 40px;
+  line-height: 1.11;
   letter-spacing: 0.02em;
   text-transform: capitalize;
 }
@@ -226,7 +229,7 @@ button:focus {
 .tel {
   font-weight: 700;
   font-size: 36px;
-  line-height: 40px;
+  line-height: 1.11;
   letter-spacing: 0.02em;
   text-transform: capitalize;
   color: var(--logo-brand-color);
@@ -235,7 +238,7 @@ button:focus {
 .email {
   font-weight: 500;
   font-size: 20px;
-  line-height: 24px;
+  line-height: 1.2;
   letter-spacing: 0.02em;
   color: var(--body-text-color);
 }
@@ -248,12 +251,23 @@ button:focus {
       rgba(46, 47, 66, 0.7),
       rgba(46, 47, 66, 0.7)
     ),
-    url(../images/mobile/hero.jpg);
+    url(../images/mobile/hero-mobile/hero.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   min-width: 100%;
-  height: 432px;
+  padding-top: 112px;
+  padding-bottom: 112px;
+}
+
+@media (min-resolution: 2dppx) {
+  .hero {
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/mobile/hero-mobile/hero@2x.jpg);
+  }
 }
 
 .hero-container {
@@ -261,13 +275,12 @@ button:focus {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding-top: 72px;
 }
 
 .page-main-title {
   font-weight: 700;
   font-size: 36px;
-  line-height: 1.1;
+  line-height: 1.11;
   letter-spacing: 0.02em;
   height: 120px;
   text-align: center;
@@ -297,7 +310,7 @@ button:focus {
         rgba(46, 47, 66, 0.7),
         rgba(46, 47, 66, 0.7)
       ),
-      url(../images/mobile/hero@x2.jpg);
+      url(../images/mobile/hero-mobile/hero@2x.jpg);
   }
 }
 
@@ -350,7 +363,7 @@ button:focus {
 }
 
 .our-advantages-section {
-  padding-top: 96px;
+  padding: 96px 0;
 }
 .our-advantages-list {
   /* gap: 24px; */
@@ -364,7 +377,7 @@ button:focus {
 
 .advantages-list-item {
   margin-bottom: 72px;
-  /* width: calc((100%-72px) / 4); */
+  width: calc((100%-72px) / 4);
 }
 
 .advantages-title {
@@ -376,7 +389,7 @@ button:focus {
 .advantages-description-text {
   font-weight: 500;
   font-size: 16px;
-  line-height: 24px;
+  line-height: 1.5;
   letter-spacing: 0.02em;
   color: var(--body-text-color);
   width: 100%;
@@ -402,8 +415,7 @@ button:focus {
 .our-team-section {
   background-color: var(--light-mode-background-color);
   margin-top: 24px;
-  padding-top: 96px;
-  padding-bottom: 120px;
+  padding: 96px 0;
 }
 
 .ourteam-section-title {
@@ -451,7 +463,7 @@ button:focus {
 
 .customers-section-title {
   margin-bottom: 72px;
-  line-height: 1.1;
+  line-height: 1.11;
 }
 
 .customers-list-icon {
@@ -1030,6 +1042,95 @@ button:focus {
     max-width: 768px;
   }
 
+  .mobile-menu-open-btn {
+    display: none;
+  }
+  .header-container {
+    justify-content: space-around;
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
+  .page-nav {
+    display: flex;
+    align-items: center;
+  }
+
+  .menu {
+    display: flex;
+    visibility: visible;
+    pointer-events: auto;
+    gap: 40px;
+  }
+
+  .contact-info {
+    visibility: visible;
+    pointer-events: auto;
+  }
+
+  .contact-info-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .menu-link {
+    font-weight: 500;
+    padding-top: 24px;
+    padding-bottom: 24px;
+    color: var(--hero-color);
+    position: relative;
+    transition: color 250ms var(--time-function);
+  }
+
+  .current::after {
+    content: "";
+    width: 100%;
+    height: 4px;
+    background-color: var(--pressed-state-color);
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    border-radius: 2px;
+  }
+
+  .current {
+    color: var(--pressed-state-color);
+  }
+
+  .current::after {
+    content: "";
+    width: 100%;
+    height: 4px;
+    background-color: var(--pressed-state-color);
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    border-radius: 2px;
+  }
+
+  .contact-link {
+    color: var(--body-text-color);
+    transition: color 250ms var(--time-function);
+  }
+
+  .hero {
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/tablet/hero-tablet/hero-tablet.jpg);
+  }
+
+  @media (min-resolution: 2dppx) {
+    .hero {
+      background-image: linear-gradient(
+          rgba(46, 47, 66, 0.7),
+          rgba(46, 47, 66, 0.7)
+        ),
+        url(../images/tablet/hero-tablet/hero-tsblet@2x.jpg);
+    }
+  }
+
   .page-main-title {
     font-size: 56px;
     line-height: 1.07;
@@ -1101,5 +1202,112 @@ button:focus {
 
   .footer-form-input {
     min-width: 264px;
+  }
+
+  .modal {
+    min-width: 408px;
+  }
+}
+
+/* Desctop */
+
+@media screen and (min-width: 1158px) {
+  .container {
+    max-width: 1158px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .header-container {
+    padding-top: 24px;
+    padding-bottom: 24px;
+  }
+
+  .contact-info-list {
+    flex-direction: row;
+    gap: 40px;
+  }
+
+  .hero {
+    margin-left: auto;
+    margin-right: auto;
+    min-width: 1440px;
+    max-width: 1440px;
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/desctop/hero-desctop/hero-descop.jpg);
+    padding-top: 188px;
+    padding-bottom: 188px;
+  }
+
+  @media (min-resolution: 2dppx) {
+    .hero {
+      background-image: linear-gradient(
+          rgba(46, 47, 66, 0.7),
+          rgba(46, 47, 66, 0.7)
+        ),
+        url(../images/desctop/hero-desctop/hero-desctop@2x.jpg);
+    }
+  }
+  .our-advantages-section {
+    padding: 120px 0;
+  }
+
+  .advantages-img-list {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    margin-bottom: 8px;
+  }
+
+  .our-advantages-list {
+    flex-wrap: nowrap;
+  }
+
+  .our-services-section {
+    display: flex;
+    padding-bottom: 120px;
+  }
+
+  .our-team-section {
+    padding: 120px 0;
+  }
+
+  .customers-section {
+    padding: 120px 0;
+  }
+
+  .customers-list {
+    flex-wrap: nowrap;
+  }
+
+  .advantages-list-item {
+    margin: 0;
+    width: calc((100%-72px) / 4);
+  }
+
+  .advantages-title {
+    font-weight: 500;
+    font-size: 20px;
+  }
+
+  .advantages-description-text {
+    font-weight: 400;
+  }
+
+  .page-footer {
+    display: flex;
+    justify-content: center;
+    padding: 100px 156px;
+  }
+
+  .footer-container {
+    margin: 0;
+  }
+
+  .social-media-footer {
+    justify-content: flex-start;
   }
 }

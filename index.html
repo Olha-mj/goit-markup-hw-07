@@ -38,7 +38,7 @@
 
                 </ul>
             </nav>
-            <address class="contact-ifo link">
+            <address class="contact-info link">
 
                 <ul class="contact-info-list list">
 
@@ -62,26 +62,24 @@
 
         <div class="mobile-menu js-menu-container">
 
-            <div class="container mobile-menu-container">
+            <div class="mobile-menu-container">
                 <button type="button" class="mobile-menu-close-btn js-close-menu">
                     <svg class="mobile-menu-close-icon" aria-label="menu close button" width="8" height="8">
                         <use href="./images/icons.svg#icon-close"></use>
                     </svg>
                 </button>
 
-                <div class="mobile-menu-list-wrapper">
-                    <ul class="mobile-menu-list list">
 
-                        <li class="mobile-list-item current"><a class="mobile-list-link link"
-                                href="./index.html">Studio</a>
-                        </li>
-                        <li class="mobile-list-item"><a class="mobile-list-link link"
-                                href="./portfolio.html">Portfolio</a>
-                        </li>
-                        <li class="mobile-list-item"><a class="mobile-list-link link" href="">Contacts</a></li>
+                <ul class="mobile-menu-list list">
 
-                    </ul>
-                </div>
+                    <li class="mobile-list-item current"><a class="mobile-list-link link" href="./index.html">Studio</a>
+                    </li>
+                    <li class="mobile-list-item"><a class="mobile-list-link link" href="./portfolio.html">Portfolio</a>
+                    </li>
+                    <li class="mobile-list-item"><a class="mobile-list-link link" href="">Contacts</a></li>
+
+                </ul>
+
                 <div class="mobile-menu-info-wrapper">
                     <address class="mobile-menu-contact-info link">
 
@@ -155,6 +153,7 @@
             <div class="hero-container container">
 
                 <h1 class="page-main-title">Effective Solutions <br> for Your Business</h1>
+
                 <button class="order-button" type="button" data-modal-open>Order Service</button>
             </div>
 
@@ -237,8 +236,7 @@
                     <li class="advantages-list-item">
                         <h3 class="advantages-title description-title">Diligence</h3>
                         <p class="advantages-description-text">Research and confirm brands that present the strongest
-                            digital
-                            growth opportunities and minimize risk.</p>
+                            digital growth opportunities and minimize risk.</p>
                     </li>
                     <li class="advantages-list-item">
                         <h3 class=" advantages-title description-title">Technologies</h3>
@@ -286,8 +284,10 @@
                 <ul class="our-team-list list">
 
                     <li class="our-team-list-item card">
-                        <img class="employees-list-img" src="./images/our_tem/mark_guerrero.jpg"
-                            alt="Mark Guerrero. Product Designer." width="264" height="260">
+                        <img class="employees-list-img"
+                            srcset="./images/our_team/mark_guerrero.jpg 1x, ./images/our_team/mark_guerrero@2x.jpg 2x"
+                            src="./images/our_team/mark_guerrero.jpg" alt="Mark Guerrero. Product Designer." width="264"
+                            height="260">
                         <div class="our-team-list-content">
                             <h3 class="team-list-title description-title">Mark Guerrero</h3>
                             <p class="description-text card-text">Product Designer</p>
@@ -336,8 +336,10 @@
                         </div>
                     </li>
                     <li class="our-team-list-item card">
-                        <img class="employees-list-img" src="./images/our_tem/tom_ford.jpg"
-                            alt="Tom Ford. Frontend Developer." width="264" height="260">
+                        <img class="employees-list-img"
+                            srcset="./images/our_team/tom_ford.jpg 1x, ./images/our_team/tom_ford@2x.jpg 2x"
+                            src="./images/our_team/tom_ford.jpg" alt="Tom Ford. Frontend Developer." width="264"
+                            height="260">
                         <div class="our-team-list-content">
                             <h3 class="team-list-title description-title">Tom Ford</h3>
                             <p class="description-text card-text">Frontend Developer</p>
@@ -385,8 +387,10 @@
                         </div>
                     </li>
                     <li class="our-team-list-item card">
-                        <img class="employees-list-img" src="./images/our_tem/camila_garcia.jpg"
-                            alt="Camila Garcia. Marketing." width="264" height="260">
+                        <img class="employees-list-img"
+                            srcset="./images/our_team/camila_garcia.jpg 1x, ./images/our_team/camila_garcia@2x.jpg 2x"
+                            src="./images/our_team/camila_garcia.jpg" alt="Camila Garcia. Marketing." width="264"
+                            height="260">
 
                         <div class="our-team-list-content">
                             <h3 class="team-list-title description-title">Camila Garcia</h3>
@@ -435,8 +439,10 @@
                         </div>
                     </li>
                     <li class="our-team-list-item card">
-                        <img class="employees-list-img" src="./images/our_tem/daniel_wilson.jpg"
-                            alt="Daniel Wilson. UI Designer." width="264" height="260">
+                        <img class="employees-list-img"
+                            srcset="./images/our_team/daniel_wilson.jpg 1x, ./images/our_team/daniel_wilson@2x.jpg 2x"
+                            src="./images/our_team/daniel_wilson.jpg" alt="Daniel Wilson. UI Designer." width="264"
+                            height="260">
                         <div class="our-team-list-content">
                             <h3 class="team-list-title description-title">Daniel Wilson</h3>
                             <p class="description-text card-text">UI Designer</p>
@@ -750,7 +756,7 @@
         </div>
 
     </div>
-    <script scr="./js/mobile-menu.js"></script>
+    <script src="./js/mobile-menu.js"></script>
     <script src="./js/modal.js"></script>
 </body>
 
