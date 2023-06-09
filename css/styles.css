@@ -1255,6 +1255,11 @@ button:focus {
     gap: 40px;
   }
 
+  .contact-link {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+
   .hero {
     margin-left: auto;
     margin-right: auto;
