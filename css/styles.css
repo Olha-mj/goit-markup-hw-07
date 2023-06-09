@@ -23,6 +23,7 @@ body {
   line-height: 1.5;
   letter-spacing: 0.02em;
   background-color: var(--page-background-color);
+  overflow-x: hidden;
 }
 
 h1,
@@ -67,8 +68,10 @@ button:focus {
 
 .container {
   width: 100%;
-  padding-right: 16px;
   padding-left: 16px;
+  padding-right: 16px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .button {
@@ -77,7 +80,7 @@ button:focus {
 
 /* ---------------Page Header------------------ */
 
-@media screen and (min-width: 428px) {
+@media screen and (min-width: 480px) {
   .container {
     max-width: 428px;
     margin-left: auto;
@@ -85,6 +88,12 @@ button:focus {
   }
 }
 
+.page-header {
+  background-color: var(--page-background-color);
+  border: 1px solid var(--modal-background-color);
+  box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
+}
 .logo {
   font-family: "Raleway", sans-serif;
   font-weight: 800;
@@ -93,7 +102,6 @@ button:focus {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: var(--logo-brand-color);
-  margin-right: 76px;
 
   transition: color 250ms var(--time-function);
 }
@@ -117,10 +125,7 @@ button:focus {
 }
 
 .contact-info {
-  visibility: hidden;
-  pointer-events: none;
-  margin: 0;
-  padding: 0;
+  display: none;
 }
 
 .mobile-menu-open-btn {
@@ -145,7 +150,7 @@ button:focus {
   height: 100%;
   top: 0;
   left: 0;
-
+  padding: 80px 35px 40px 40px;
   opacity: 0;
   pointer-events: none;
   visibility: hidden;
@@ -155,11 +160,6 @@ button:focus {
   opacity: 1;
   pointer-events: auto;
   visibility: visible;
-}
-
-.mobile-menu-container {
-  position: relative;
-  padding: 80px 35px 40px 40px;
 }
 
 .mobile-menu-close-btn {
@@ -184,6 +184,8 @@ button:focus {
   display: flex;
   flex-direction: column;
   gap: 284px;
+  justify-content: space-between;
+  height: 100%;
 }
 
 .mobile-menu-list {
@@ -213,12 +215,10 @@ button:focus {
 .mobile-menu-social-list {
   display: flex;
   gap: 56px;
-  margin-left: 24px;
 }
 
 .mobile-menu-contact-info {
   margin-bottom: 48px;
-  margin-left: 24px;
 }
 
 .mobile-info-list {
@@ -364,11 +364,8 @@ button:focus {
 }
 
 .our-advantages-section {
-  padding: 96px 0;
-}
-.our-advantages-list {
-  /* gap: 24px; */
-  /* flex-basis: calc(100% - 48px / 3); */
+  padding-top: 96px;
+  padding-bottom: 24px;
 }
 
 .our-services-list {
@@ -427,6 +424,7 @@ button:focus {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap: 72px;
 }
 
 .our-team-list-item {
@@ -434,7 +432,7 @@ button:focus {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-bottom: 72px;
+
   max-width: 264px;
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
@@ -468,7 +466,7 @@ button:focus {
 }
 
 .customers-list-icon {
-  margin: 16px 32px;
+  margin: 16px 18px;
   fill: currentColor;
 }
 
@@ -636,8 +634,9 @@ button:focus {
 
 .filter-button-list {
   display: flex;
-  justify-content: center;
-  margin-bottom: 72px;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  margin-bottom: 48px;
   gap: 24px;
 }
 
@@ -673,12 +672,13 @@ button:focus {
 /* ------Cards Section----- */
 
 .projects-card-list {
-  display: flex;
-  flex-wrap: wrap;
-  flex-basis: calc(100% / 9 - 24px);
-  padding-bottom: 120px;
-  column-gap: 24px;
-  row-gap: 48px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.project-card {
+  margin-bottom: 48px;
+  width: calc((100% - 24px) / 2);
 }
 
 .project-link {
@@ -780,7 +780,7 @@ button:focus {
   height: 100%;
   background-color: rgba(46, 47, 66, 0.4);
   z-index: 100;
-
+  overflow-y: scroll;
   transition: opacity 250ms var(--time-function),
     visibility 250ms var(--time-function);
 }
@@ -797,7 +797,8 @@ button:focus {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 392px;
+
+  max-width: 428px;
   min-height: 576px;
   background-color: var(--modal-background-color);
   border-radius: 4px;
@@ -1042,14 +1043,17 @@ button:focus {
   .container {
     max-width: 768px;
   }
-
   .mobile-menu-open-btn {
     display: none;
   }
   .header-container {
-    justify-content: space-around;
+    justify-content: space-between;
     padding-top: 12px;
     padding-bottom: 12px;
+  }
+
+  .logo {
+    margin-right: 76px;
   }
   .page-nav {
     display: flex;
@@ -1064,17 +1068,17 @@ button:focus {
   }
 
   .contact-info {
-    visibility: visible;
-    pointer-events: auto;
+    display: flex;
   }
 
   .contact-info-list {
     display: flex;
     flex-direction: column;
-    gap: 12px;
   }
 
   .menu-link {
+    font-size: 16px;
+    line-height: 1.5;
     font-weight: 500;
     padding-top: 24px;
     padding-bottom: 24px;
@@ -1110,6 +1114,8 @@ button:focus {
   }
 
   .contact-link {
+    font-size: 12px;
+    line-height: 1.16;
     color: var(--body-text-color);
     transition: color 250ms var(--time-function);
   }
@@ -1176,7 +1182,7 @@ button:focus {
     align-items: baseline;
     justify-content: flex-start;
     gap: 24px;
-    margin-left: 108px;
+    padding-left: 93px;
   }
 
   .footer-info {
@@ -1208,6 +1214,22 @@ button:focus {
   .modal {
     min-width: 408px;
   }
+
+  /* Tablet Portfolio */
+
+  .filter-button-list {
+    justify-content: center;
+    margin-bottom: 68px;
+  }
+
+  .projects-card-list {
+    display: flex;
+    /* flex-basis: calc(100% / 9 - 24px); */
+    padding-bottom: 120px;
+    column-gap: 24px;
+    row-gap: 48px;
+    flex-basis: calc((100% - 24px) / 3);
+  }
 }
 
 /* Desctop */
@@ -1232,8 +1254,7 @@ button:focus {
   .hero {
     margin-left: auto;
     margin-right: auto;
-    min-width: 1440px;
-    max-width: 1440px;
+    /* min-width: 1440px; */
     background-image: linear-gradient(
         rgba(46, 47, 66, 0.7),
         rgba(46, 47, 66, 0.7)
@@ -1301,14 +1322,22 @@ button:focus {
   .page-footer {
     display: flex;
     justify-content: center;
-    padding: 100px 156px;
+    /* padding: 100px 156px; */
   }
 
   .footer-container {
     margin: 0;
+    flex-wrap: nowrap;
+    gap: 0;
   }
 
   .social-media-footer {
     justify-content: flex-start;
+    margin-left: 100px;
+  }
+
+  .footer-form-container {
+    margin-top: 0;
+    margin-left: 30px;
   }
 }
