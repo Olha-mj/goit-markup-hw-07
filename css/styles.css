@@ -213,6 +213,7 @@ button:focus {
 .mobile-menu-social-list {
   display: flex;
   gap: 56px;
+  justify-content: space-evenly;
 }
 
 .mobile-menu-contact-info {
