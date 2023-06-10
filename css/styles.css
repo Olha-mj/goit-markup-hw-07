@@ -182,7 +182,6 @@ button:focus {
 .mobile-menu-container {
   display: flex;
   flex-direction: column;
-  gap: 284px;
   justify-content: space-between;
   height: 100%;
 }
@@ -490,6 +489,7 @@ button:focus {
 .customers-list-item {
   max-height: 88px;
   width: calc((100% - 16px) / 2);
+  margin-bottom: 65px;
 }
 
 .customers-list-link:hover,
