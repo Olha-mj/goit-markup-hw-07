@@ -129,7 +129,6 @@ button:focus {
 
 .mobile-menu-open-btn {
   border: none;
-  margin-right: 20px;
   background-color: transparent;
   padding: 0;
 }
@@ -212,8 +211,7 @@ button:focus {
 
 .mobile-menu-social-list {
   display: flex;
-  gap: 56px;
-  justify-content: space-evenly;
+  justify-content: space-between;
 }
 
 .mobile-menu-contact-info {
