@@ -1312,6 +1312,9 @@ button:focus {
   .customers-list {
     flex-wrap: nowrap;
   }
+  .customers-list-item {
+    margin-bottom: 0;
+  }
 
   .advantages-list-item {
     margin: 0;
